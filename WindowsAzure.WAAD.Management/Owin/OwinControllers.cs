@@ -198,10 +198,14 @@ namespace WindowsAzure.WAAD.Management.Owin
                          {
                              using (var storage = CloudContext.Clients.CreateStorageManagementClient(cred))
                              {
-                                // var loc = storage.StorageAccounts.GetKeys("sinnovations"); // WORKS
-                                 var storages = await storage.StorageAccounts.ListAsync(new CancellationToken());
-                                 // storages.Count is 0
+                               
+                                 //0.9.4-preview Returns no storage accounts for all subscriptions.
+                                 //var storages = await storage.StorageAccounts.ListAsync();
+                                 //storages.Count is 0
+                                 //return storages.Select(s => s.Name);
 
+                                 //0.9.3-preview  Works
+                                 var storages = await storage.StorageAccounts.ListAsync(new CancellationToken());
                                  return storages.Select(s => s.ServiceName);
                              }
                          }));
