@@ -1,0 +1,15 @@
+﻿<div class="row" data-bind="visible:hasAccessToken">
+
+    <h2 class="sub-header">Storage Accounts</h2>
+    <button class="btn btn-block" data-bind="click:getStorageAccounts">Get Storage Accounts</button>
+
+    <div data-bind="foreach: storageAccounts">
+        <div>
+
+            <button class="btn btn-info btn-block">Show Info for
+			 <b data-bind="text:accountname, click:$parent.showImagesFor"></b>
+			 <i data-bind="text:prittySize"></i>
+			 </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿
+
+<ul data-bind="visible:isAuthenticated" class="nav navbar-nav navbar-right">
+    <li>
+        <a href="#" data-bind="text:name"></a>
+      
+    </li>
+    <li>
+        <a href="/logout">Sign out</a>    
+    </li>
+</ul>
+
+<ul data-bind="visible:!isAuthenticated()" class="nav navbar-nav navbar-right">
+    <li><a href="/signup">Sign up</a></li>
+    <li><a href="/login">Login</a></li>
+</ul>
