@@ -3,6 +3,10 @@ WindowsAzure.WAAD.Management
 
 A multi tenant Windows Azure Active Directory application demo for management of Windows Azure subscriptions using Owin and Typescript
 
+If you want to try the demo without giving access to your production subscriptions and have a test subscription already placed on a default, that is the easiest way. If you have a test subscription you can also just create a new WAAD and move the subscription to that WAAD and create a test organizational user (remember to give him access to the subscription also in settings on management portal) and try out the demo and move it back when done.
+
+The easiest thing is ofcause just to sign in with your current organizational user and try it out. All the code is here on github if you want to check it out. But I take full responsiblity for any harm this app might cause to your subscription. It is only reading meta data on your storage blobs.
+
 
 ###Yes the code is ugly and hacky and contains no error checking.
 
